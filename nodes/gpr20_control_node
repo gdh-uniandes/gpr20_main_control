@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+
+# Imports main executable node
+from gpr20_control.control import Control
+
+if __name__ == "__main__":
+
+	control = Control()
