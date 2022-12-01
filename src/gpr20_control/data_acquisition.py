@@ -140,7 +140,7 @@ class DataAcquisition(object):
         response = self.vna_config_freq_sweep_srv(f_start, f_stop, f_points)
 
         # Return the response status flag
-        return response.status
+        return response.result
 
     def get_frequencies(self):
         """Retrieve the VNA frequencies vector.

@@ -119,7 +119,7 @@ class Control(object):
             on_survey = self.survey_thread.is_alive()
 
             # Get the status message
-            status = self.survey_thread.status()
+            status = self.survey_thread.status
 
             # Get visited points
             visited = self.survey_thread.current_point
@@ -132,7 +132,7 @@ class Control(object):
 
             # Get remaining time
             remaining_time = self.survey_thread.remaining_time   
-
+            
             # Publish the feedback
-            self.control_fb_pub(on_survey, status, visited, remaining_points,
+            self.control_fb_pub.publish(on_survey, status, visited, remaining_points,
                 completion, remaining_time)
